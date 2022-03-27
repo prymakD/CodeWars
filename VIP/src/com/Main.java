@@ -5,16 +5,31 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int numOfSets = Integer.parseInt(scanner.nextLine());
-        for (int a = 0; a < 2; a++) {
-            int numOfPeople = Integer.parseInt(scanner.nextLine());
+        int numOfSets = scanner.nextInt();
+
+        for (int a = 0; a < numOfSets; a++) {
+            int numOfPeople = scanner.nextInt();
             int matrix[][] = new int[numOfPeople][numOfPeople];
-            for (int i=0; i<numOfPeople; i++) {
-                for (int j=0; j<numOfPeople; j++) {
-                    matrix[i][j] = Integer.parseInt(scanner.nextLine());
+
+            for (int row = 0; row < numOfPeople; row++) {
+                    String line = scanner.nextLine();
+                    String[] parts = line.split(" ");
+
+                for (int col = 0; col < numOfPeople; col++) {
+                    matrix[row][col] = Integer.valueOf(parts[col]);
                 }
             }
-        }
 
+            for (int row = 0; row < numOfPeople; row++) {
+                int ones = 0;
+                for (int col = 0; col < numOfPeople; col++) {
+                    if (matrix[row][col] == 1) ones++;
+                }
+
+                if (ones == 1) System.out.println(row + 1);
+            }
+        }
     }
+
 }
+
