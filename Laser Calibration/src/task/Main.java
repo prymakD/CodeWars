@@ -1,7 +1,6 @@
 package task;
 
 import java.lang.Math;
-
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -13,7 +12,7 @@ public class Main {
             double firstNum = scanner.nextDouble();
             double secondNum = scanner.nextDouble();
             double numOfRefl = Math.floor((180 - 2 * secondNum) / firstNum);
-            System.out.println(numOfRefl);
+            System.out.println((int)numOfRefl);
         }
     }
 }
