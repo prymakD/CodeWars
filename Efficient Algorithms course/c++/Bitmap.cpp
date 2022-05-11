@@ -4,6 +4,7 @@
 // ---------------------------   GLOBALE  --------------------------- //
 std::queue<std::pair<short int, short int> >Q;
 int ltestow, h, w, w_a, h_a, tab[200][200];
+
 char c;
 
 // ---------------------------  FUNCTIONS --------------------------- //
